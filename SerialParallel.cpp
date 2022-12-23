@@ -58,7 +58,7 @@ int main()
     int* b = new int[n];
     int* c = new int[n];
     std::string ss = "";
-    for (int ni = 100; ni <= 1000; ni += 100) {
+    for (int ni = 100; ni <= 10000; ni += 100) {
         for (int i = 0; i < ni; i++) {
             b[i] = 1;
             c[i] = 0;
