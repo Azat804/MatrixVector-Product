@@ -71,7 +71,7 @@ int main()
         t = omp_get_wtime() - t;
         ss += std::to_string(ni) + ";" + std::to_string(t) + ";";
         printf_s("Time serial= %f\n", t);
-       /* printf_s("Matrix a=\n");
+        /*printf_s("Matrix a=\n");
         for (int i = 0; i < ni; i++) {
             printf_s("\n");
             for (int j = 0; j < ni; j++) {
@@ -85,7 +85,7 @@ int main()
 
         }*/
         printf_s("\n");
-        printf_s("Vector c=\n");
+        printf_s("Vector c by serial=\n");
         for (int i = 0; i < ni; i++) {
             printf_s("%d ", c[i]);
             c[i] = 0;
@@ -96,7 +96,7 @@ int main()
         ss += std::to_string(t) + ";";
         printf_s("\n");
         printf_s("Time parallelRow= %f\n", t);
-        printf_s("Vector c=\n");
+        printf_s("Vector c by parallelRow=\n");
         for (int i = 0; i < ni; i++) {
             printf_s("%d ", c[i]);
             c[i] = 0;
@@ -110,7 +110,7 @@ int main()
         ss = "";
         printf_s("\n");
         printf_s("Time parallelCol= %f\n", t);
-        printf_s("Vector c=\n");
+        printf_s("Vector c by parallelCol=\n");
         for (int i = 0; i < ni; i++) {
             printf_s("%d ", c[i]);
             c[i] = 0;
